@@ -1,92 +1,93 @@
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background: #f4f4f9;
-    margin: 0;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-image:url("Rose.jpg");
-    background-size: cover;         
-    background-position: center;  
-    background-repeat: no-repeat;  
-    height: 100%;
-    overflow-x: hidden;
-    overscroll-behavior: none;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f4f9;
+  margin: 0;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("Rose.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow-x: hidden;
+  overscroll-behavior: none;
+}
+
+@media (max-width: 900px) {
+  .container {
+    padding: 16px;
+    width: 100vw;
   }
-  @media (max-width: 900px) {
-    .container {
-      padding: 16px;
-      width: 100vw;
-    }
-  
-    .content-box {
-      width: 90vw;
-      margin-top: 20px;
-      padding: 16px;
-      border-radius: 8px;
-      background: rgba(255, 255, 255, 0.95);
-      max-width: 300px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-      display: block;
-    }
-  
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-  }
-  
-  
-  h1 {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #f0f0f0;
-    font-size:50px;
-  }
-  
-  .button-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    max-width: 1000px;
-    width: 100%;
-  }
-  
-  button {
-    padding: 15px 20px;
-    font-size: 1rem;
-    background: #1e90ff;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: 0.3s;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background: #123456;
-  }
-  
+
   .content-box {
-    margin-top: 40px;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    max-width: 1300px;
-    width: 100%;
+    width: 90vw;
+    margin-top: 20px;
+    padding: 16px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.95);
+    max-width: 300px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     display: none;
   }
-  
-  .content-box h2 {
-    text-align: center;
-    margin-top: 0;
-    color: #333;
+
+  img {
+    max-width: 100%;
+    height: auto;
   }
-  
- #menuToggle {
+}
+
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #f0f0f0;
+  font-size: 50px;
+}
+
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+button {
+  padding: 15px 20px;
+  font-size: 1rem;
+  background: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #123456;
+}
+
+.content-box {
+  margin-top: 40px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 1300px;
+  width: 100%;
+  display: none;
+}
+
+.content-box h2 {
+  text-align: center;
+  margin-top: 0;
+  color: #333;
+}
+
+#menuToggle {
   position: fixed;
   top: 20px;
   right: 20px;
@@ -97,84 +98,104 @@ body {
   z-index: 1100;
 }
 
-  
-  .overlay-menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* transparent și întunecat */
-    backdrop-filter: blur(4px); /* blur pentru fundal */
-    display: none;
-    flex-direction: column;
-    align-items: flex-end;
-    z-index: 1000;
-  }
-  
-  .overlay-menu.show {
-    display: flex;
-    animation: fadeIn 0.3s ease-in-out;
-  }
-  
-  #closeMenu {
-    font-size: 28px;
-    margin: 20px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-  }
-  
-  .overlay-content {
-    color: white;
-    padding: 40px;
-    width: 100%;
-    text-align: center;
-  }
-  
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+
+.overlay-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* transparent și întunecat */
+  backdrop-filter: blur(4px);
+  /* blur pentru fundal */
+  display: none;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 1000;
+}
+
+.overlay-menu.show {
+  display: flex;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+#closeMenu {
+  font-size: 28px;
+  margin: 20px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.overlay-content {
+  color: white;
+  padding: 40px;
+  width: 100%;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
 
-  #menuToggleleft {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    font-size: 26px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    z-index: 1100;
+  to {
+    opacity: 1;
   }
-  
-    
-    .overlayleftmenu {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5); 
-      backdrop-filter: blur(4px);
-      display: none;
-      flex-direction: column;
-      align-items: flex-end;
-      z-index: 1000;
-    }
-    
-    .overlayleftmenu.show {
-      display: flex;
-      animation: fadeIn 0.3s ease-in-out;
-    }
-    .overlay-content-left {
-      color: white;
-      padding: 40px;
-      max-height: 90%;  
-      overflow-y: auto;
-      text-align: center;
-    }
-  .imagine1{
-    width:380px;
-  }
+}
+
+#menuToggleleft {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+
+.overlayleftmenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  display: none;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-direction: column;
+  align-items: flex-end;
+  overflow-y: auto;
+  z-index: 1000;
+  /* background-color: red; */
+}
+
+.overlayleftmenu.show {
+  display: flex;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.overlay-content-left {
+  color: white;
+  padding: 40px;
+  max-height: 90%;
+  /* overflow-y: hidden; */
+  text-align: center;
+}
+
+.imagine1 {
+  width: 360px;
+  margin-top: 50px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+p {
+  /* margin-bottom: 50px; */
+  font: bold 20px 'Segoe UI', sans-serif;
+}
